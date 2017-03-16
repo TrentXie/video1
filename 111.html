@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>video</title>
+    <style type="text/css">*{padding:0;margin:0;}</style>
+</head>
+<body>
+<a style="display: block;margin:10px;padding: 10px;background-color: #ccc" href="javascript:void(0)" >1111</a>
+<div>
+        <video webkit-playsinline playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"   preload="auto" src="http://videooc.tc.qq.com/vcloud1022.tc.qq.com/1022_dfb16b627330472f9c7630fc0bf59698.f0.mp4?vkey=475F46192CF942E469FA92AF7F3531AE6D7BAEA22DA1D551592DF0AA40ED54B6905B251AD3BA7F9480CC99B84F62683EE046D3236B88A3A22FF3A5F2605AC087818C2F93AC10DD71E7E89E593DB63B0D3180EACFE02F2833&amp;sha=0" id="video" type="video/mp4"></video>
+        <!-- <video playsinline="" webkit-playsinline="" preload="auto" id="videoBack" width="375" height="603" poster="http://game.gtimg.cn/images/game/act/a20161121xzq/images/video.jpg" src="http://videooc.tc.qq.com/vcloud1022.tc.qq.com/1022_dfb16b627330472f9c7630fc0bf59698.f0.mp4?vkey=475F46192CF942E469FA92AF7F3531AE6D7BAEA22DA1D551592DF0AA40ED54B6905B251AD3BA7F9480CC99B84F62683EE046D3236B88A3A22FF3A5F2605AC087818C2F93AC10DD71E7E89E593DB63B0D3180EACFE02F2833&amp;sha=0" style="position: absolute; display: block; z-index: 100;"></video> -->
+        <!-- x5-video-player-type="h5" x5-video-player-fullscreen="true" -->
+	
+</div>
+<!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+<!-- <script type="text/javascript" src="http://game.qq.com/act/a20161121xzq/libs/iphone-inline-video.browser.js"></script> -->
+    <script type="text/javascript">
+    // document.querySelectorAll('body')[0].appendChild(video)
+    // show =function () {
+    //     video.style.display = "block";
+
+    //     video.play()
+
+    // }
+    // show();
+
+    // setTimeout(function(){
+    // 	// document.getElementById('video').play();
+    // },5000);
+	// makeVideoPlayableInline(video, true)
+	var video=document.getElementById("video"),
+		ua = {
+	        Android: /Android/ig.test(navigator.userAgent),
+	        iOS: /AppleWebKit/.test(navigator.userAgent) && /Mobile\/\w+/.test(navigator.userAgent),
+	        QQAC_ANDROID: /(^| )QQAC_Client_Android( |\/|$)/i.test(navigator.userAgent),
+	        QQAC_IOS: /(^| )QQAC_Client_iOS( |\/|$)/i.test(navigator.userAgent),
+    	}
+	;
+	// wx.config({
+	//     // 配置信息, 即使不正确也能使用 wx.ready
+	//     debug: false,
+	//     appId: '',
+	//     timestamp: 1,
+	//     nonceStr: '',
+	//     signature: '',
+	//     jsApiList: []
+	// });
+	// function autoPlayVideo() {
+	// 	if(ua.iOS){
+	// 		    wx.ready(function() {
+	// 		    	// alert(video.paused)
+	// 		    		// if (!video.paused) return;
+	// 		    		// alert(1)
+	// 		    	    video.play();
+	// 		    });
+	// 	}
+	// 	else{
+	//       if(video.readyState == 4) {
+	//       	alert('必须引导点击才能播放');
+	//       }else{
+	//       	setTimeout(function(){autoPlayVideo()});
+	//       }
+	// 	}
+
+
+	// }
+	// autoPlayVideo();
+	document.querySelectorAll('a')[0].onclick = function(){
+		video.play();
+		alert(4)
+	}
+    document.querySelectorAll('video')[0].style.width=window.innerWidth+'px';
+    </script>
+</body>
+</html>
